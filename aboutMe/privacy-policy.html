@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Live Clock</title>
+<meta name="description" content="Privacy policy for the Live Clock browser extension: no data collected, no network requests, no third-party code.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1b1c1e;
+    --muted: #5f6368;
+    --rule: #e3e5e8;
+    --accent: #1a73e8;
+    --panel: #f6f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181b;
+      --fg: #e8eaed;
+      --muted: #9aa0a6;
+      --rule: #2d3136;
+      --accent: #8ab4f8;
+      --panel: #1e2126;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 3rem 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 1.25rem; margin-bottom: 2rem; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 .5rem; letter-spacing: -.01em; }
+  h2 { font-size: 1.15rem; margin: 2.5rem 0 .6rem; letter-spacing: -.005em; }
+  p, li { margin: .6rem 0; }
+  ul { padding-left: 1.3rem; }
+  .meta { color: var(--muted); font-size: .875rem; margin: 0; }
+  .lead {
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0 0;
+  }
+  .lead p { margin: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .9375rem; }
+  th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-weight: 600; color: var(--muted); font-size: .8125rem; text-transform: uppercase; letter-spacing: .04em; }
+  code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .9em; background: var(--panel); padding: .1em .35em; border-radius: 4px; }
+  a { color: var(--accent); }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .875rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Privacy Policy — Live Clock</h1>
+    <p class="meta">Effective 16 November 2026 · Applies to Live Clock 0.1.0 for Chrome and Microsoft Edge</p>
+  </header>
+
+  <div class="lead">
+    <p><strong>Live Clock does not collect, transmit, or sell any data.</strong> It requests no permissions, makes no network requests, contains no analytics and no third-party code. Everything it shows is computed on your device from your own system clock.</p>
+  </div>
+
+  <h2>1. What the extension does</h2>
+  <p>Live Clock adds a toolbar button. Clicking it opens a small popup that shows the current date and time, refreshed once per second while the popup is open. Closing the popup stops all activity. That is the entire feature set.</p>
+
+  <h2>2. Data we collect</h2>
+  <p><strong>None.</strong> We do not collect personal data, usage data, diagnostics, identifiers, or location data. No account is required and none exists. There is no server operated by us that the extension could send anything to.</p>
+  <p>We use "collect" in the ordinary sense: transmitting data off your device to us or to anyone else. The extension does not do that.</p>
+
+  <h2>3. Permissions</h2>
+  <p>The extension declares <strong>no permissions</strong> in its manifest. At install time it therefore receives no access to your browsing history, tabs, bookmarks, cookies, downloads, clipboard, files, microphone, camera, geolocation, or other websites. It cannot read or modify the pages you visit.</p>
+
+  <h2>4. Information handled on your device</h2>
+  <p>To render the popup, the extension reads a few values from your own machine at the moment it paints:</p>
+  <table>
+    <thead>
+      <tr><th>Value</th><th>Why</th><th>What happens to it</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Current date and time</td>
+        <td>It is a clock</td>
+        <td>Read from the operating system, held in memory, discarded when the popup closes. Never written to disk.</td>
+      </tr>
+      <tr>
+        <td>Time zone and UTC offset</td>
+        <td>To label the reading with the zone it belongs to</td>
+        <td>Same: in memory only, never stored, never transmitted.</td>
+      </tr>
+      <tr>
+        <td>Browser interface language</td>
+        <td>To format the date the way your locale writes it (<code>chrome.i18n</code>)</td>
+        <td>Read-only lookup. Never stored, never transmitted.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>None of these values are personal data in our hands, because none of them ever reach us. The extension uses no cookies, no <code>localStorage</code>, no IndexedDB, no cache, and no other persistent storage.</p>
+
+  <h2>5. Network activity</h2>
+  <p>None. The extension makes no HTTP or HTTPS requests, opens no sockets, and loads no remote resources. It ships no remote code: all HTML, CSS, JavaScript and images are contained in the installed package, as required by Manifest V3. It works identically with the network disconnected.</p>
+
+  <h2>6. Third parties</h2>
+  <p>There are none. No analytics, advertising, crash reporting, A/B testing, fonts, CDNs, or SDKs of any kind are included. We do not sell, rent, share, or transfer data to third parties, because we hold none.</p>
+
+  <h2>7. Distribution platforms</h2>
+  <p>If you install Live Clock from the Chrome Web Store or Microsoft Edge Add-ons, those stores operate under their own privacy policies and may collect installation and usage statistics. As the developer we receive only aggregate figures such as install counts, never information about individual users. If you install a copy distributed by your organisation, that organisation's own policies may also apply.</p>
+
+  <h2>8. Children's privacy</h2>
+  <p>The extension is not directed at children and collects no data from anyone, of any age. Because no personal data is collected, no verifiable parental consent is applicable.</p>
+
+  <h2>9. Your rights</h2>
+  <p>Privacy laws such as the GDPR and the CCPA give you rights to access, correct, delete, port, or restrict processing of your personal data, and to object to its sale or sharing. Since we collect and process no personal data, there is nothing for us to disclose, correct, delete, or transfer, and we do not sell or share personal data. You can remove all data the extension could possibly have by uninstalling it; there is no residual copy anywhere else.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>If a future version of the extension ever handles data differently, this page will be updated before that version is published, with a new effective date, and the change will be noted in the store release notes. The current text describes version 0.1.0 accurately; we will not quietly broaden it.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions about this policy or about the extension: <a href="mailto:harwise@163.com">harwise@163.com</a>.</p>
+
+  <footer>
+    <p>This policy applies to the browser extension named Live Clock, distributed through the Chrome Web Store and Microsoft Edge Add-ons. 中文版：<a href="privacy-policy.zh-CN.html" hreflang="zh-CN" lang="zh-CN">隐私政策（简体中文）</a></p>
+  </footer>
+</main>
+</body>
+</html>
